@@ -76,7 +76,7 @@ class B2CPluginWeb {
 
       case 'policyTriggerInteractive':
         var args = call.arguments;
-
+        print('policyTriggerInteractive called');
         String tag = args["tag"];
         String policyName = args["policyName"];
         List<String> scopes = <String>[];

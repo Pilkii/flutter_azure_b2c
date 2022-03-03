@@ -228,6 +228,7 @@ class B2CProviderWeb {
       List<String> scopes, String? loginHint) async {
     try {
       if (_interactionMode == B2CInteractionMode.REDIRECT) {
+        print('Redirect called');
         await _b2cApp!.acquireTokenRedirect(RedirectRequest()
           ..scopes = scopes
           ..authority = _getAuthorityFromPolicyName(policyName)

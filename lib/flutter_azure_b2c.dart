@@ -200,7 +200,7 @@ class AzureB2C {
       "scopes": scopes,
       "loginHint": loginHint
     };
-
+    print('policyTriggerInteractive called');
     await _channel.invokeMethod('policyTriggerInteractive', args);
     return tag;
   }
