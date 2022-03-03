@@ -229,6 +229,9 @@ class B2CProviderWeb {
     try {
       if (_interactionMode == B2CInteractionMode.REDIRECT) {
         print('Redirect called');
+        print(scopes);
+        print(_getAuthorityFromPolicyName(policyName));
+        print(loginHint);
         await _b2cApp!.acquireTokenRedirect(RedirectRequest()
           ..scopes = scopes
           ..authority = _getAuthorityFromPolicyName(policyName)
